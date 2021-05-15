@@ -1,0 +1,915 @@
+[gd_scene load_steps=56 format=2]
+
+[ext_resource path="res://src/UI_Elements/TouchScreenScroll/SpecialOccasoin_TuchScroll.gd" type="Script" id=1]
+[ext_resource path="res://graphics/Textures/Common/Go back_p.png" type="Texture" id=2]
+[ext_resource path="res://graphics/Textures/Common/Go back.png" type="Texture" id=3]
+[ext_resource path="res://graphics/Fonts/DroidSerif-Italic.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://src/UI_Elements/FileManager/FileManager.tscn" type="PackedScene" id=5]
+[ext_resource path="res://graphics/Fonts/DroidSans.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://src/MainScenes/MainMenu/Menu.gd" type="Script" id=7]
+[ext_resource path="res://graphics/Textures/Boys/Main background.png" type="Texture" id=8]
+[ext_resource path="res://src/MainScenes/MainMenu/Boy_Girl_Theme_Switcher.gd" type="Script" id=9]
+[ext_resource path="res://graphics/Textures/Advertisement/Youtube.png" type="Texture" id=10]
+[ext_resource path="res://graphics/Fonts/SansitaSwashed-VariableFont_wght.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://graphics/Textures/Boys/diary.png" type="Texture" id=12]
+[ext_resource path="res://graphics/Fonts/For Writting/Imgs/DancingScript-Regular.png" type="Texture" id=13]
+[ext_resource path="res://graphics/Textures/Girls/button.png" type="Texture" id=14]
+[ext_resource path="res://graphics/Fonts/For Writting/Imgs/LucidaBrightRegular.png" type="Texture" id=15]
+[ext_resource path="res://src/UI_Elements/TouchScreenScroll/TouchScreenScroll.gd" type="Script" id=16]
+[ext_resource path="res://graphics/Themes/Boys/Dialogues_boys.tres" type="Theme" id=17]
+[ext_resource path="res://graphics/Fonts/Homework.otf" type="DynamicFontData" id=18]
+[ext_resource path="res://graphics/Fonts/Yellowtail-Regular.ttf" type="DynamicFontData" id=19]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.286275, 0.52549, 0.623529, 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 52
+font_data = ExtResource( 11 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.286275, 0.52549, 0.623529, 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 52
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 21
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.6, 0.6, 0.6, 0.380392 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 53
+font_data = ExtResource( 18 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0, 0, 0, 0.521569 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 33
+font_data = ExtResource( 19 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 23
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.247059, 0.423529, 0.729412, 1 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 33
+font_data = ExtResource( 19 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 35
+font_data = ExtResource( 19 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 21
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 34
+font_data = ExtResource( 19 )
+
+[sub_resource type="DynamicFont" id=18]
+size = 27
+font_data = ExtResource( 19 )
+
+[sub_resource type="DynamicFont" id=19]
+size = 27
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 25
+font_data = ExtResource( 19 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 23
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 23
+font_data = ExtResource( 19 )
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 0.211765, 0.211765, 0.211765, 1 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 59
+font_data = ExtResource( 18 )
+
+[sub_resource type="DynamicFont" id=25]
+size = 32
+font_data = ExtResource( 18 )
+
+[sub_resource type="DynamicFont" id=26]
+size = 38
+font_data = ExtResource( 19 )
+
+[sub_resource type="StyleBoxFlat" id=27]
+bg_color = Color( 0.176471, 0.172549, 0.180392, 1 )
+
+[sub_resource type="StyleBoxFlat" id=28]
+bg_color = Color( 0.372549, 0.380392, 0.376471, 0.792157 )
+
+[sub_resource type="StyleBoxFlat" id=29]
+
+[sub_resource type="StyleBoxFlat" id=30]
+bg_color = Color( 0.156863, 0, 0.152941, 1 )
+
+[sub_resource type="DynamicFont" id=31]
+size = 27
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=32]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=33]
+size = 47
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=34]
+bg_color = Color( 0.168627, 0.172549, 0.215686, 0.709804 )
+
+[sub_resource type="DynamicFont" id=35]
+size = 73
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=36]
+size = 28
+font_data = ExtResource( 6 )
+
+[node name="Main Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Home" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="Home"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Home"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="CenterContainer" parent="Home/VBoxContainer"]
+margin_right = 600.0
+margin_bottom = 510.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Diary label" type="Button" parent="Home/VBoxContainer/Title"]
+margin_left = 144.0
+margin_top = 102.0
+margin_right = 456.0
+margin_bottom = 408.0
+icon = ExtResource( 12 )
+flat = true
+
+[node name="Button side" type="CenterContainer" parent="Home/VBoxContainer"]
+margin_top = 514.0
+margin_right = 600.0
+margin_bottom = 1024.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Buttons" type="VBoxContainer" parent="Home/VBoxContainer/Button side"]
+margin_left = 115.0
+margin_top = 87.0
+margin_right = 485.0
+margin_bottom = 423.0
+
+[node name="Write Diary" type="Button" parent="Home/VBoxContainer/Button side/Buttons"]
+margin_right = 370.0
+margin_bottom = 64.0
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.180392, 0.12549, 0.811765, 1 )
+text = "Write Diary"
+
+[node name="View Diary" type="Button" parent="Home/VBoxContainer/Button side/Buttons"]
+margin_top = 68.0
+margin_right = 370.0
+margin_bottom = 132.0
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.521569, 0.00392157, 0.564706, 1 )
+text = "View Diary"
+
+[node name="Special Occasions" type="Button" parent="Home/VBoxContainer/Button side/Buttons"]
+margin_top = 136.0
+margin_right = 370.0
+margin_bottom = 200.0
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.0156863, 0.992157, 0.00784314, 1 )
+text = "Special Occasions"
+
+[node name="Settings" type="Button" parent="Home/VBoxContainer/Button side/Buttons"]
+margin_top = 204.0
+margin_right = 370.0
+margin_bottom = 268.0
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.984314, 0.992157, 0.00784314, 1 )
+text = "Settings"
+
+[node name="Exit" type="Button" parent="Home/VBoxContainer/Button side/Buttons"]
+margin_top = 272.0
+margin_right = 370.0
+margin_bottom = 336.0
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Exit"
+
+[node name="Youtube" type="HBoxContainer" parent="Home"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -366.028
+margin_top = 35.1352
+margin_right = -35.028
+margin_bottom = 105.135
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Home/Youtube"]
+margin_top = 22.0
+margin_right = 257.0
+margin_bottom = 47.0
+size_flags_vertical = 6
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.109804, 0.0117647, 0.996078, 1 )
+text = "Visit My Youtube Channel:"
+align = 1
+valign = 1
+
+[node name="Visit Youtube" type="Button" parent="Home/Youtube"]
+margin_left = 261.0
+margin_right = 331.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+action_mode = 0
+icon = ExtResource( 10 )
+expand_icon = true
+
+[node name="Settings" type="Panel" parent="Home"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Home/Settings"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -267.0
+margin_top = -454.0
+margin_right = 267.0
+margin_bottom = 396.0
+custom_styles/panel = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Home/Settings/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.25986
+margin_right = 1.25989
+color = Color( 0.2, 0.2, 0.2, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Panel" parent="Home/Settings/Panel/ColorRect"]
+anchor_right = 1.0
+margin_bottom = 74.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Home/Settings/Panel/ColorRect/Title"]
+anchor_right = 1.0
+margin_bottom = 72.0
+texture = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Home/Settings/Panel/ColorRect/Title/TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0.529412, 0.254902, 0.254902, 1 )
+text = "Settings"
+align = 1
+valign = 1
+
+[node name="path" type="Panel" parent="Home/Settings/Panel/ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.238
+anchor_right = 0.5
+anchor_bottom = 0.238
+margin_left = -248.0
+margin_top = -71.3834
+margin_right = 247.0
+margin_bottom = 71.6166
+custom_styles/panel = SubResource( 10 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="DirectoryHeading" type="Label" parent="Home/Settings/Panel/ColorRect/path"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -147.0
+margin_top = -22.2487
+margin_right = 147.0
+margin_bottom = 20.7513
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0.831373, 0.831373, 0.831373, 1 )
+text = "		Your diary is saved here:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Path" type="Label" parent="Home/Settings/Panel/ColorRect/path"]
+anchor_right = 1.0
+margin_top = 14.3618
+margin_bottom = 81.3618
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0, 0.862745, 0.376471, 1 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Browse" type="Button" parent="Home/Settings/Panel/ColorRect/path"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -116.981
+margin_top = -38.0
+margin_right = 23.0187
+margin_bottom = 18.0
+custom_styles/normal = SubResource( 13 )
+custom_fonts/font = SubResource( 14 )
+text = "Set path"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Writing Type" type="Panel" parent="Home/Settings/Panel/ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -202.5
+margin_top = -13.1594
+margin_right = 202.5
+margin_bottom = 51.8406
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Home/Settings/Panel/ColorRect/Writing Type"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -31.5
+margin_right = 200.0
+margin_bottom = 32.5
+custom_fonts/font = SubResource( 15 )
+custom_colors/font_color = Color( 0.67451, 0.862745, 0.0470588, 1 )
+text = "Writing type:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Select font" type="OptionButton" parent="Home/Settings/Panel/ColorRect/Writing Type"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -205.0
+margin_top = -32.5
+margin_bottom = 32.5
+custom_fonts/font = SubResource( 16 )
+text = "Block letters"
+icon = ExtResource( 15 )
+items = [ "Block letters", ExtResource( 15 ), false, 1, null, "Cursive", ExtResource( 13 ), false, 2, null ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="CheckButton" parent="Home/Settings/Panel/ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -133.454
+margin_top = 43.2944
+margin_right = 32.5462
+margin_bottom = 96.2944
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0.329412, 0.945098, 0.352941, 1 )
+custom_colors/font_color_pressed = Color( 0.658824, 0.615686, 0.866667, 1 )
+custom_constants/check_vadjust = 4
+pressed = true
+text = "Music:"
+align = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Boy_Girl" type="CheckButton" parent="Home/Settings/Panel/ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -172.135
+margin_top = -107.226
+margin_right = 19.865
+margin_bottom = -54.2261
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/font = SubResource( 18 )
+custom_colors/font_color = Color( 0.917647, 0.917647, 0.917647, 1 )
+custom_colors/font_color_pressed = Color( 0, 0.666667, 1, 1 )
+custom_constants/check_vadjust = 4
+text = "Girl/Boy"
+align = 1
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+Diary_button = NodePath("../../../../VBoxContainer/Title/Diary label")
+Main_background = NodePath("../../../../Background")
+Settings_title = NodePath("../Title/TextureRect")
+Settings_BackGround = NodePath("..")
+Save_Settings = NodePath("../save settings")
+Occasions_dialogue = NodePath("../../../../AcceptDialog")
+
+[node name="music type" type="VBoxContainer" parent="Home/Settings/Panel/ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -170.0
+margin_top = 121.0
+margin_right = 142.0
+margin_bottom = 392.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Home/Settings/Panel/ColorRect/music type"]
+margin_right = 312.0
+margin_bottom = 33.0
+
+[node name="Label" type="Label" parent="Home/Settings/Panel/ColorRect/music type/HBoxContainer"]
+margin_right = 89.0
+margin_bottom = 33.0
+custom_fonts/font = SubResource( 19 )
+custom_colors/font_color = Color( 0.0313726, 0.203922, 0.882353, 1 )
+text = "Current:"
+valign = 1
+
+[node name="curr Name" type="Label" parent="Home/Settings/Panel/ColorRect/music type/HBoxContainer"]
+margin_left = 93.0
+margin_right = 168.0
+margin_bottom = 33.0
+custom_fonts/font = SubResource( 20 )
+custom_colors/font_color = Color( 0.713726, 0.0901961, 0.0901961, 1 )
+text = "Current:"
+valign = 1
+
+[node name="ColorRect" type="ColorRect" parent="Home/Settings/Panel/ColorRect/music type"]
+margin_top = 37.0
+margin_right = 312.0
+margin_bottom = 67.0
+rect_min_size = Vector2( 0, 30 )
+color = Color( 0.305882, 0.603922, 0.615686, 1 )
+
+[node name="Label" type="Label" parent="Home/Settings/Panel/ColorRect/music type/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 21 )
+text = "Music Name"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Home/Settings/Panel/ColorRect/music type"]
+margin_top = 71.0
+margin_right = 312.0
+margin_bottom = 271.0
+size_flags_vertical = 3
+script = ExtResource( 16 )
+
+[node name="Names" type="VBoxContainer" parent="Home/Settings/Panel/ColorRect/music type/ScrollContainer"]
+margin_right = 312.0
+margin_bottom = 200.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Calm tune" type="Button" parent="Home/Settings/Panel/ColorRect/music type/ScrollContainer/Names"]
+margin_right = 312.0
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 22 )
+text = "Calm tune (default)"
+
+[node name="Piano Music" type="Button" parent="Home/Settings/Panel/ColorRect/music type/ScrollContainer/Names"]
+margin_top = 40.0
+margin_right = 312.0
+margin_bottom = 76.0
+custom_fonts/font = SubResource( 22 )
+text = "Piano Music"
+
+[node name="Life Is Strange" type="Button" parent="Home/Settings/Panel/ColorRect/music type/ScrollContainer/Names"]
+margin_top = 80.0
+margin_right = 312.0
+margin_bottom = 116.0
+custom_fonts/font = SubResource( 22 )
+text = "Life Is Strange"
+
+[node name="Meadow" type="Button" parent="Home/Settings/Panel/ColorRect/music type/ScrollContainer/Names"]
+margin_top = 120.0
+margin_right = 312.0
+margin_bottom = 156.0
+custom_fonts/font = SubResource( 22 )
+text = "Meadow"
+
+[node name="back" type="TextureButton" parent="Home/Settings/Panel/ColorRect"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -116.0
+margin_top = -106.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="save settings" type="Panel" parent="Home/Settings/Panel/ColorRect"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -279.0
+margin_top = -233.0
+margin_right = 278.0
+margin_bottom = 329.0
+custom_styles/panel = SubResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Home/Settings/Panel/ColorRect/save settings"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -262.5
+margin_top = -262.0
+margin_right = 262.5
+margin_bottom = 262.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Home/Settings/Panel/ColorRect/save settings"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -244.586
+margin_top = 92.1184
+margin_right = 247.414
+margin_bottom = 158.119
+custom_fonts/font = SubResource( 24 )
+custom_colors/font_color = Color( 0.435294, 0.682353, 0.972549, 1 )
+text = "Save changes?"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Note" type="Label" parent="Home/Settings/Panel/ColorRect/save settings"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -228.0
+margin_top = 159.0
+margin_right = 228.0
+margin_bottom = 273.0
+custom_fonts/font = SubResource( 25 )
+custom_colors/font_color = Color( 0.760784, 0.105882, 0.290196, 1 )
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Home/Settings/Panel/ColorRect/save settings"]
+margin_left = 33.9142
+margin_top = 316.0
+margin_right = 525.914
+margin_bottom = 430.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Home/Settings/Panel/ColorRect/save settings/CenterContainer"]
+margin_left = 151.0
+margin_right = 339.0
+margin_bottom = 120.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="save it" type="Button" parent="Home/Settings/Panel/ColorRect/save settings/CenterContainer/VBoxContainer"]
+margin_right = 188.0
+margin_bottom = 55.0
+custom_fonts/font = SubResource( 26 )
+custom_colors/font_color = Color( 0.129412, 0.482353, 0.517647, 1 )
+text = "Yes i'm done"
+
+[node name="cancel" type="Button" parent="Home/Settings/Panel/ColorRect/save settings/CenterContainer/VBoxContainer"]
+margin_top = 65.0
+margin_right = 188.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 26 )
+custom_colors/font_color = Color( 0.129412, 0.482353, 0.517647, 1 )
+text = "No, cancel it!"
+
+[node name="FileManager" parent="Home/Settings/Panel" instance=ExtResource( 5 )]
+
+[node name="AcceptDialog" type="AcceptDialog" parent="Home"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -260.0
+margin_top = -176.0
+margin_right = 260.0
+margin_bottom = 177.0
+theme = ExtResource( 17 )
+window_title = ""
+dialog_autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpecialOccasionPanel" type="Panel" parent="Home"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.12244
+margin_right = 1.12244
+custom_styles/panel = SubResource( 27 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Home/SpecialOccasionPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 22.0
+margin_top = 28.0
+margin_right = -22.0
+margin_bottom = -29.0
+custom_styles/panel = SubResource( 28 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="RichTextLabel" parent="Home/SpecialOccasionPanel/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -278.0
+margin_right = 278.0
+margin_bottom = 87.0
+rect_min_size = Vector2( 0, 67 )
+size_flags_horizontal = 3
+custom_styles/focus = SubResource( 29 )
+custom_styles/normal = SubResource( 30 )
+custom_fonts/normal_font = SubResource( 31 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+fit_content_height = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Home/SpecialOccasionPanel/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -181.0
+mouse_default_cursor_shape = 13
+custom_styles/panel = SubResource( 32 )
+
+[node name="Container" type="ScrollContainer" parent="Home/SpecialOccasionPanel/Panel"]
+margin_top = 94.0
+margin_right = 556.0
+margin_bottom = 773.0
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpecialButtons" type="VBoxContainer" parent="Home/SpecialOccasionPanel/Panel/Container"]
+margin_right = 556.0
+margin_bottom = 679.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Add" type="Button" parent="Home/SpecialOccasionPanel/Panel"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -167.0
+margin_top = -171.0
+custom_fonts/font = SubResource( 33 )
+custom_colors/font_color = Color( 0.12549, 1, 0, 1 )
+text = "ADD"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit Special" type="TextureButton" parent="Home/SpecialOccasionPanel/Panel"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -171.0
+margin_right = 163.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Help" type="Panel" parent="Home"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 34 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="Home/Help"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -185.0
+margin_top = -174.0
+margin_right = 1.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+expand = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Home/Help"]
+margin_right = 600.0
+margin_bottom = 850.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Home/Help/VBoxContainer"]
+margin_right = 600.0
+margin_bottom = 86.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 35 )
+custom_colors/font_color = Color( 0.87451, 0.847059, 0.117647, 1 )
+text = "Help"
+align = 1
+valign = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Home/Help/VBoxContainer"]
+margin_top = 90.0
+margin_right = 600.0
+margin_bottom = 850.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Home/Help/VBoxContainer/ScrollContainer"]
+margin_right = 600.0
+margin_bottom = 1122.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 36 )
+text = "This app is created by \"Variable\"
+
+Important Instructions:
+1.	First and Foremost, if you like this app, remember to visit and subscribe to my channel.
+ 
+2. The path must be set before you first use the diary. The path can be set in the settings. Please note that:
+	
+	\"/storage/emulated/0/\" = \"/Storage/Phone/\"
+
+3.	When the diary path is changed, your old entries will be automatically moved to the new path.
+
+4.	you can scroll up and down in \"Write Diary\" by dragging the scrollbar at the right of the text
+
+5.	You can read your diary from the \"View Diary\". On opening the desired page of the diary, the text from that page will be automatically copied to clipboard (so that you can paste it somewhere else)
+Note: You can also delete your previous days from \"View Diary\"
+
+6.	If you have an \"Occasion\" in mind you can add it in the \"Special Occasions\" menu.
+A pop up will remind you of the occasion on the given day when you open the diary. (You can also delete or disable the occasion in the \"Special Occasions\" menu)."
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="Home/VBoxContainer/Title/Diary label" to="." method="_on_Diary_label_pressed"]
+[connection signal="pressed" from="Home/VBoxContainer/Button side/Buttons/Write Diary" to="." method="_on_Write_Diary_pressed"]
+[connection signal="pressed" from="Home/VBoxContainer/Button side/Buttons/View Diary" to="." method="_on_View_Diary_pressed"]
+[connection signal="pressed" from="Home/VBoxContainer/Button side/Buttons/Special Occasions" to="." method="_on_Special_Occasions_pressed"]
+[connection signal="pressed" from="Home/VBoxContainer/Button side/Buttons/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="Home/VBoxContainer/Button side/Buttons/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="Home/Youtube/Visit Youtube" to="." method="_on_Visit_Youtube_pressed"]
+[connection signal="pressed" from="Home/Settings/Panel/ColorRect/path/Browse" to="." method="_on_Browse_pressed"]
+[connection signal="item_selected" from="Home/Settings/Panel/ColorRect/Writing Type/Select font" to="." method="_on_Select_font_item_selected"]
+[connection signal="toggled" from="Home/Settings/Panel/ColorRect/Boy_Girl" to="Home/Settings/Panel/ColorRect/Boy_Girl" method="_on_Boy_Girl_toggled"]
+[connection signal="pressed" from="Home/Settings/Panel/ColorRect/music type/ScrollContainer/Names/Calm tune" to="." method="_on_Calm_tune_pressed"]
+[connection signal="pressed" from="Home/Settings/Panel/ColorRect/music type/ScrollContainer/Names/Piano Music" to="." method="_on_Piano_Music_pressed"]
+[connection signal="pressed" from="Home/Settings/Panel/ColorRect/music type/ScrollContainer/Names/Life Is Strange" to="." method="_on_Life_Is_Strange_pressed"]
+[connection signal="pressed" from="Home/Settings/Panel/ColorRect/music type/ScrollContainer/Names/Meadow" to="." method="_on_Meadow_pressed"]
+[connection signal="pressed" from="Home/Settings/Panel/ColorRect/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Home/Settings/Panel/ColorRect/save settings/CenterContainer/VBoxContainer/save it" to="." method="_on_save_it_pressed"]
+[connection signal="pressed" from="Home/Settings/Panel/ColorRect/save settings/CenterContainer/VBoxContainer/cancel" to="." method="_on_cancel_pressed"]
+[connection signal="Selected" from="Home/Settings/Panel/FileManager" to="." method="_on_File_Manager_Selected"]
+[connection signal="pressed" from="Home/SpecialOccasionPanel/Panel/Add" to="." method="_on_Add_pressed"]
+[connection signal="pressed" from="Home/SpecialOccasionPanel/Panel/Exit Special" to="." method="_on_Exit_Special_pressed"]
+[connection signal="pressed" from="Home/Help/TextureButton" to="." method="_on_TextureButton_pressed"]

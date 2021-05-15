@@ -1,0 +1,261 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://graphics/Textures/Common/Go back_p.png" type="Texture" id=1]
+[ext_resource path="res://graphics/Textures/Common/Go back.png" type="Texture" id=2]
+[ext_resource path="res://src/MainScenes/DiaryWriting/Diary.gd" type="Script" id=3]
+[ext_resource path="res://graphics/Textures/Common/Read diary.png" type="Texture" id=4]
+[ext_resource path="res://graphics/Textures/Common/write background.png" type="Texture" id=5]
+[ext_resource path="res://graphics/Textures/Common/done.png" type="Texture" id=6]
+[ext_resource path="res://graphics/Fonts/SansitaSwashed-VariableFont_wght.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://graphics/Textures/Common/done pressed.png" type="Texture" id=8]
+[ext_resource path="res://graphics/Fonts/For Writting/Date day block.tres" type="DynamicFont" id=9]
+[ext_resource path="res://graphics/Fonts/For Writting/Block writing.tres" type="DynamicFont" id=10]
+[ext_resource path="res://graphics/Fonts/Homework.otf" type="DynamicFontData" id=11]
+[ext_resource path="res://graphics/Fonts/Yellowtail-Regular.ttf" type="DynamicFontData" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.560784, 0.709804, 0.705882, 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 26
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 84
+font_data = ExtResource( 11 )
+
+[node name="Diary" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+margin_right = 600.0
+margin_bottom = 67.0
+rect_min_size = Vector2( 0, 67 )
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.364706, 0.364706, 0.364706, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.956863, 0.486275, 0.984314, 1 )
+text = "My Diary"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Save" type="TextureButton" parent="VBoxContainer/Panel"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -96.2599
+margin_right = -24.2599
+margin_bottom = 71.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Panel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -588.149
+margin_top = -33.5
+margin_right = -516.149
+margin_bottom = 37.5
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="back" type="TextureButton" parent="VBoxContainer/Panel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -488.036
+margin_top = -33.5
+margin_right = -416.036
+margin_bottom = 37.5
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="VBoxContainer"]
+margin_top = 71.0
+margin_right = 600.0
+margin_bottom = 1024.0
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Date" type="Label" parent="VBoxContainer/Panel2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -233.0
+margin_top = -350.5
+margin_right = 233.0
+margin_bottom = -319.5
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0.490196, 0.0823529, 0.858824, 1 )
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Day" type="Label" parent="VBoxContainer/Panel2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -233.0
+margin_top = -309.913
+margin_right = 233.0
+margin_bottom = -278.913
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0.0823529, 0.313726, 0.858824, 1 )
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 68.0
+margin_top = 219.0
+margin_right = -41.0
+margin_bottom = -126.0
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/completion_scroll_color = Color( 0, 0, 0, 1 )
+custom_colors/background_color = Color( 0, 0, 0, 0 )
+custom_constants/line_spacing = 7
+show_line_numbers = true
+selecting_enabled = false
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Save\?" type="Panel" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -257.0
+margin_top = -139.0
+margin_right = 258.0
+margin_bottom = 139.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Save\?"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 4.0
+margin_right = -3.00003
+margin_bottom = -3.0
+color = Color( 0.329412, 0.345098, 0.392157, 0.741176 )
+
+[node name="cancel" type="Button" parent="Save\?"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 23.0
+margin_top = -89.0
+margin_right = 227.0
+margin_bottom = -22.0
+custom_fonts/font = SubResource( 4 )
+text = "No, i want to go back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="done" type="Button" parent="Save\?"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -217.0
+margin_top = -86.0
+margin_right = -26.0
+margin_bottom = -22.0
+custom_fonts/font = SubResource( 4 )
+text = "Yes,I'm Done"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Save\?"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -64.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.67451, 0.447059, 0.686275, 1 )
+text = "Save?"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="VBoxContainer/Panel/Save" to="." method="_on_Save_pressed"]
+[connection signal="pressed" from="VBoxContainer/Panel/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/Panel/back" to="." method="_on_back_pressed"]
+[connection signal="focus_entered" from="VBoxContainer/Panel2/TextEdit" to="." method="_on_TextEdit_focus_entered"]
+[connection signal="pressed" from="Save?/cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="Save?/done" to="." method="_on_done_pressed"]

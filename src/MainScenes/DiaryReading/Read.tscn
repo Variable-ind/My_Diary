@@ -1,0 +1,311 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://graphics/Textures/Common/Go back.png" type="Texture" id=1]
+[ext_resource path="res://src/MainScenes/DiaryReading/Read.gd" type="Script" id=2]
+[ext_resource path="res://graphics/Fonts/SansitaSwashed-VariableFont_wght.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://src/UI_Elements/TouchScreenScroll/TouchScreenScroll.gd" type="Script" id=4]
+[ext_resource path="res://graphics/Fonts/Yellowtail-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://graphics/Textures/Boys/Read list.png" type="Texture" id=6]
+[ext_resource path="res://graphics/Textures/Common/Go back_p.png" type="Texture" id=7]
+[ext_resource path="res://graphics/Fonts/For Writting/Read_Block.tres" type="DynamicFont" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 41
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.901961, 0.121569, 0.121569, 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 45
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.470588, 0.458824, 0.658824, 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 23
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.133333, 0.133333, 0.133333, 0.913725 )
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.901961, 0.121569, 0.121569, 1 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 45
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.12549, 0.254902, 0.639216, 1 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 45
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 44
+font_data = ExtResource( 3 )
+
+[node name="Read" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lists" type="VBoxContainer" parent="."]
+pause_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Panel" parent="lists"]
+margin_right = 600.0
+margin_bottom = 67.0
+rect_min_size = Vector2( 0, 67 )
+
+[node name="ColorRect" type="ColorRect" parent="lists/Title"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.25098, 0.25098, 0.25098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="lists/Title/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -12.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.956863, 0.486275, 0.984314, 1 )
+text = "Entries"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="scene close" type="TextureButton" parent="lists/Title"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -89.0
+margin_top = -33.5
+margin_right = -12.0
+margin_bottom = 37.5
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="TextureRect" parent="lists"]
+margin_top = 71.0
+margin_right = 600.0
+margin_bottom = 1024.0
+size_flags_vertical = 3
+texture = ExtResource( 6 )
+expand = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="lists/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 115.897
+margin_top = 116.228
+margin_right = -109.103
+margin_bottom = -114.772
+mouse_filter = 1
+scroll_horizontal_enabled = false
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="lists/Panel/ScrollContainer"]
+
+[node name="reader" type="VBoxContainer" parent="."]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="reader"]
+margin_right = 600.0
+margin_bottom = 67.0
+rect_min_size = Vector2( 0, 67 )
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="reader/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.215686, 0.215686, 0.215686, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="reader/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 162.0
+margin_right = -103.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.956863, 0.486275, 0.984314, 1 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="reader close" type="TextureButton" parent="reader/Panel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -89.0
+margin_top = -29.5
+margin_right = -30.0
+margin_bottom = 31.5
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Delete" type="Button" parent="reader/Panel"]
+margin_right = 159.0
+margin_bottom = 68.0
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.756863, 0.756863, 0.756863, 1 )
+text = "Delete!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="reader"]
+margin_top = 71.0
+margin_right = 600.0
+margin_bottom = 100.0
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.713726, 0.0392157, 0.0392157, 1 )
+text = "The Text Has been Copied To Clipboard For Your Convenience"
+align = 1
+valign = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="reader"]
+margin_top = 104.0
+margin_right = 600.0
+margin_bottom = 1024.0
+size_flags_vertical = 3
+custom_styles/bg = SubResource( 7 )
+scroll_horizontal_enabled = false
+script = ExtResource( 4 )
+
+[node name="TextEdit" type="RichTextLabel" parent="reader/ScrollContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 580.0
+margin_bottom = 973.0
+rect_min_size = Vector2( 500, 953 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 8 )
+tab_size = 1
+fit_content_height = true
+scroll_active = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Delete\?" type="Panel" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 8 )
+
+[node name="Dilogue" type="Panel" parent="Delete\?"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 278.0
+margin_bottom = -422.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Delete it" type="Button" parent="Delete\?/Dilogue"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 53.984
+margin_top = 28.0
+margin_right = 212.984
+margin_bottom = 96.0
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0.756863, 0.756863, 0.756863, 1 )
+text = "Delete!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="No!" type="Button" parent="Delete\?/Dilogue"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -219.658
+margin_top = 28.0
+margin_right = -60.6582
+margin_bottom = 96.0
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0.756863, 0.756863, 0.756863, 1 )
+text = "No!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Delete\?/Dilogue"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 13 )
+text = "Do you really want to delete a page of your life?"
+align = 1
+autowrap = true
+
+[connection signal="pressed" from="lists/Title/scene close" to="." method="_on_scene_close_pressed"]
+[connection signal="pressed" from="reader/Panel/reader close" to="." method="_on_reader_close_pressed"]
+[connection signal="pressed" from="reader/Panel/Delete" to="." method="_on_Delete_pressed"]
+[connection signal="pressed" from="Delete?/Dilogue/Delete it" to="." method="_on_Delete_it_pressed"]
+[connection signal="pressed" from="Delete?/Dilogue/No!" to="." method="_on_No_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Life Is Strange.ogg-0732d007ff8325b80e1abfb840ccb658.oggstr"
+
+[deps]
+
+source_file="res://Music/Life Is Strange.ogg"
+dest_files=[ "res://.import/Life Is Strange.ogg-0732d007ff8325b80e1abfb840ccb658.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

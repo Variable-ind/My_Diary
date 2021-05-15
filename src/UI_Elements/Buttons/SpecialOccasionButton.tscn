@@ -1,0 +1,108 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/UI_Elements/Buttons/SpecialOccasionButton.gd" type="Script" id=1]
+[ext_resource path="res://graphics/Fonts/DroidSans.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.0313726, 0.380392, 0.858824, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.905882, 0.27451, 0.27451, 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 22
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 26
+font_data = ExtResource( 2 )
+
+[node name="Button" type="ColorRect"]
+margin_right = 556.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 0, 150 )
+size_flags_horizontal = 3
+color = Color( 0.054902, 0.054902, 0.054902, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vbox" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="vbox"]
+margin_right = 556.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextEdit" type="TextEdit" parent="vbox/HBoxContainer"]
+margin_right = 397.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 0, 90 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "New Occasion"
+wrap_enabled = true
+
+[node name="CheckButton" type="CheckButton" parent="vbox/HBoxContainer"]
+margin_left = 401.0
+margin_right = 556.0
+margin_bottom = 90.0
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+pressed = true
+text = "Enabled:"
+
+[node name="Buttons" type="HBoxContainer" parent="vbox"]
+margin_top = 94.0
+margin_right = 556.0
+margin_bottom = 150.0
+size_flags_vertical = 3
+custom_constants/separation = 6
+
+[node name="Delete" type="Button" parent="vbox/Buttons"]
+margin_right = 182.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 182, 0 )
+custom_fonts/font = SubResource( 5 )
+text = "Delete"
+
+[node name="Date" type="OptionButton" parent="vbox/Buttons"]
+margin_left = 188.0
+margin_right = 245.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 57, 0 )
+custom_fonts/font = SubResource( 5 )
+text = "1"
+items = [ "1", null, false, 0, null, "2", null, false, 1, null, "3", null, false, 2, null, "4", null, false, 3, null, "5", null, false, 4, null, "6", null, false, 5, null, "7", null, false, 6, null, "8", null, false, 7, null, "9", null, false, 8, null, "10", null, false, 9, null, "11", null, false, 10, null, "12", null, false, 11, null, "13", null, false, 12, null, "14", null, false, 13, null, "15", null, false, 14, null, "16", null, false, 15, null, "17", null, false, 16, null, "18", null, false, 17, null, "19", null, false, 18, null, "20", null, false, 19, null, "21", null, false, 20, null, "22", null, false, 21, null, "23", null, false, 22, null, "24", null, false, 23, null, "25", null, false, 24, null, "26", null, false, 25, null, "27", null, false, 26, null, "28", null, false, 27, null, "29", null, false, 28, null, "30", null, false, 29, null, "31", null, false, 30, null ]
+selected = 0
+
+[node name="Month" type="OptionButton" parent="vbox/Buttons"]
+margin_left = 251.0
+margin_right = 556.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 5 )
+text = "January"
+items = [ "January", null, false, 0, null, "February", null, false, 1, null, "March", null, false, 2, null, "April", null, false, 3, null, "May", null, false, 4, null, "June", null, false, 5, null, "July", null, false, 6, null, "August", null, false, 7, null, "September", null, false, 8, null, "Octuber", null, false, 9, null, "November", null, false, 10, null, "December", null, false, 11, null ]
+selected = 0
+
+[connection signal="focus_entered" from="vbox/HBoxContainer/TextEdit" to="." method="_on_TextEdit_focus_entered"]
+[connection signal="focus_exited" from="vbox/HBoxContainer/TextEdit" to="." method="_on_TextEdit_focus_exited"]
+[connection signal="gui_input" from="vbox/HBoxContainer/TextEdit" to="." method="_on_TextEdit_gui_input"]
+[connection signal="mouse_entered" from="vbox/HBoxContainer/TextEdit" to="." method="_on_TextEdit_mouse_entered"]
+[connection signal="pressed" from="vbox/Buttons/Delete" to="." method="_on_Delete_pressed"]
