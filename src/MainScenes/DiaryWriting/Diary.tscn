@@ -251,8 +251,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-
 [connection signal="pressed" from="VBoxContainer/Panel/Save" to="." method="_on_Save_pressed"]
 [connection signal="pressed" from="VBoxContainer/Panel/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/Panel/back" to="." method="_on_back_pressed"]

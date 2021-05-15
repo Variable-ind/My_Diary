@@ -4,9 +4,6 @@ onready var Delete_panel = get_node("Delete?")
 var read_path = ""
 onready var reader = get_node("reader")
 onready var lists = get_node("lists")
-onready var music = get_node("AudioStreamPlayer")
-
-
 var Theme_path = "user://Theme info.dat"
 
 
@@ -24,10 +21,6 @@ func _ready():
 	
 	read_path = base_info.location
 	#read_path = "user://Settings/My Diary/"   #testing on pc
-	
-	music.stream = load(str("res://Music/",base_info.name,".ogg"))
-	music.playing = base_info.music
-	music.seek(Global.timing)
 	
 	if base_info.style == 0:
 		var dynamic_font = preload("res://graphics/Fonts/For Writting/Read_Block.tres")
@@ -61,10 +54,6 @@ func _ready():
 		new_button.get_node("Label").text = file
 		new_button.connect("pressed",self,"button_pressed",[file])
 		buttons.add_child(new_button)
-
-
-func _process(_delta):
-	Global.timing = music.get_playback_position()
 
 
 func button_pressed(name):

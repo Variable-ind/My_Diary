@@ -890,8 +890,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-
 [connection signal="pressed" from="Home/VBoxContainer/Title/Diary label" to="." method="_on_Diary_label_pressed"]
 [connection signal="pressed" from="Home/VBoxContainer/Button side/Buttons/Write Diary" to="." method="_on_Write_Diary_pressed"]
 [connection signal="pressed" from="Home/VBoxContainer/Button side/Buttons/View Diary" to="." method="_on_View_Diary_pressed"]

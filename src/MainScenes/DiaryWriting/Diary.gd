@@ -5,7 +5,6 @@ onready var save_pannel = get_node("Save?")
 onready var todays_Date = get_node("VBoxContainer/Panel2/Date")
 onready var todays_Day = get_node("VBoxContainer/Panel2/Day")
 onready var text_pannel = get_node("VBoxContainer/Panel2/TextEdit")
-onready var music = get_node("AudioStreamPlayer")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -18,10 +17,6 @@ func _ready():
 	
 	save_path = base_info.location           #Set storage path
 	#save_path = "user://Settings/My Diary/"   #testing on pc
-	
-	music.stream = load(str("res://Music/",base_info.name,".ogg"))    #Set Music name and playing
-	music.playing = base_info.music
-	music.seek(Global.timing)
 	
 	if base_info.style == 0:
 		var dynamic_font = preload("res://graphics/Fonts/For Writting/Block writing.tres")
@@ -42,7 +37,6 @@ func _ready():
 
 
 func _process(_delta):
-	Global.timing = music.get_playback_position()
 	var curr_date_day = Get_date_day()
 	if todays_Date.text != curr_date_day.Date.replace("Was","is"):
 		todays_Date.text = curr_date_day.Date.replace("Was","is")
@@ -91,11 +85,11 @@ func _on_Save_pressed():
 
 
 func _on_TextureButton_pressed():
-	var error = get_tree().change_scene("res://src/MainScenes/DiaryReading/Read.tscn")
+	var _error = get_tree().change_scene("res://src/MainScenes/DiaryReading/Read.tscn")
 
 
 func _on_back_pressed():
-	var error = get_tree().change_scene("res://src/MainScenes/MainMenu/Menu.tscn")
+	var _error = get_tree().change_scene("res://src/MainScenes/MainMenu/Menu.tscn")
 
 
 func Get_date_day():

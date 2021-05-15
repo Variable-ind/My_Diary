@@ -1,5 +1,8 @@
 extends Node
 
+var audio :AudioStreamPlayer
 
-var timing : float = 0.0
-
+func _ready():
+	audio = AudioStreamPlayer.new()
+	audio.name = "AudioStreamPlayer"
+	add_child(audio)

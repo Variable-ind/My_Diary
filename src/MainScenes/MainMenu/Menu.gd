@@ -1,6 +1,5 @@
 extends Control
 
-onready var Audio = get_node("AudioStreamPlayer")
 onready var settings = get_node("Home/Settings")
 onready var path_label = settings.get_node("Panel/ColorRect/path/Path")
 onready var save_settings = settings.get_node("Panel/ColorRect/save settings")
@@ -22,7 +21,7 @@ onready var Help = get_node("Home/Help")
 var will_move = false
 var old_path = ""
 var save_path = "user://Settings.dat"
-
+var app_just_opened = true
 
 var save_info = {
 	"style" : 0,
@@ -54,10 +53,11 @@ func _ready():
 	settings.visible = false
 	save_settings.visible = false
 	Special_occ_panel.visible = false
-	
+	print("Playing ",AudioPlayerController.audio.playing)
 	sync_with_old_save_info()
-	if(music.pressed):
-		Audio.play(Global.timing)
+	print("Playing ",AudioPlayerController.audio.playing)
+	if not music.pressed && AudioPlayerController.audio.playing:
+		AudioPlayerController.audio.stop()
 	settings.visible = false
 	save_settings.visible = false
 	
@@ -65,14 +65,13 @@ func _ready():
 
 
 func _process(_delta):
-	if(Audio.playing != music.pressed):
-		if(music.pressed == false):
-				Global.timing = 0.0
-				Audio.stop()
-		if(music.pressed == true):
-			Audio.play(Global.timing)
-			
-	Global.timing = Audio.get_playback_position()
+	if(AudioPlayerController.audio.playing != music.pressed):
+		if music.pressed == false && AudioPlayerController.audio.playing:
+			AudioPlayerController.audio.stop()
+			print("stop")
+		if music.pressed == true && not AudioPlayerController.audio.playing:
+			AudioPlayerController.audio.play()
+			print("play")
 
 
 func _on_Write_Diary_pressed():
@@ -154,7 +153,9 @@ func sync_with_old_save_info():
 	Select_font.selected = save_info.style
 	path_label.text = ProjectSettings.globalize_path(save_info.location)
 	music_name.text = save_info.name
-	Audio.stream = load(str("res://Music/",save_info.name,".ogg"))
+	var new_stream = load(str("res://Music/",save_info.name,".ogg"))
+	if AudioPlayerController.audio.stream != new_stream:
+		AudioPlayerController.audio.stream = new_stream
 	music.pressed = save_info.music
 	Boy_Girl.pressed = save_info.gender_boy
 
@@ -195,31 +196,23 @@ func _on_Select_font_item_selected(index):
 #music buttons
 func _on_Calm_tune_pressed():
 	music_name.text = "Calm tune"
-	Audio.stream = load(str("res://Music/",music_name.text,".ogg"))
-	Global.timing = 0.0
-	Audio.seek(Global.timing)
+	AudioPlayerController.audio.stream = load(str("res://Music/",music_name.text,".ogg"))
 
 
 func _on_Piano_Music_pressed():
 	music_name.text = "Piano Music"
-	Audio.stream = load(str("res://Music/",music_name.text,".ogg"))
-	Global.timing = 0.0
-	Audio.seek(Global.timing)
+	AudioPlayerController.audio.stream = load(str("res://Music/",music_name.text,".ogg"))
 
 
 func _on_Life_Is_Strange_pressed():
 	music_name.text = "Life Is Strange"
-	Audio.stream = load(str("res://Music/",music_name.text,".ogg"))
-	Global.timing = 0.0
-	Audio.seek(Global.timing)
+	AudioPlayerController.audio.stream = load(str("res://Music/",music_name.text,".ogg"))
 
 
 func _on_Meadow_pressed():
 	music_name.text = "Meadow"
-	Audio.stream = load(str("res://Music/",music_name.text,".ogg"))
-	Global.timing = 0.0
-	Audio.seek(Global.timing)
-
+	AudioPlayerController.audio.stream = load(str("res://Music/",music_name.text,".ogg"))
+	
 
 #Secret help menu
 func _on_TextureButton_pressed():

@@ -28,7 +28,7 @@ default_bus_layout=""
 
 [autoload]
 
-Global="*res://src/Autoload/AudioTracking.gd"
+AudioPlayerController="*res://src/Autoload/AudioTracking.gd"
 
 [display]
 
