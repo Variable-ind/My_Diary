@@ -1,7 +1,11 @@
 # My Diary
 <h3>one-line description:</h3>
 An android app made entirely in Godot for keeping your journal
-![](https://img.itch.zone/aW1hZ2UvODQzMDMyLzQ3MjYzMzMucG5n/347x500/wGkRYn.png)
+
+[![My Diary's UI](https://img.itch.zone/aW1hZ2UvODQzMDMyLzQ3MjYzMzMucG5n/347x500/wGkRYn.png)](https://variable-industries.itch.io/diary)
+[![My Diary's UI](https://img.itch.zone/aW1hZ2UvODQzMDMyLzQ3MjYzMzgucG5n/347x500/4z3rp7.png)](https://variable-industries.itch.io/diary)
+[![My Diary's UI](https://img.itch.zone/aW1hZ2UvODQzMDMyLzQ3MjYzMzkucG5n/347x500/OC9Uge.png)](https://variable-industries.itch.io/diary)
+
 <h3>Introduction</h3> 
 It is an app that i made while learning "Godot". This app will store your daily entries on your desired location in the form of ".txt" format. Also you can "View", "Delete" or move your entries to a new location from within the app (it is advisable to not tamper with the entries from outside of the app). There is also a "Special Occasions" tab in which you can set a reminder for events.
 
